@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.163.1/containers/python-3
+{
+	"name": "Terraform AWS",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			// TODO set env values(AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY) to your host machine
+			// if localEnv doesnt load during build, restart docker may solve it...
+			// https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+			// or write directly!!
+			"AWS_ACCESS_KEY_ID": "${localEnv:AWS_ACCESS_KEY_ID}",
+			"AWS_SECRET_ACCESS_KEY": "${localEnv:AWS_SECRET_ACCESS_KEY}"
+		}
+	},
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+	},
+
+	"extensions": [
+		"HashiCorp.terraform"
+	],
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip3 install --user -r requirements.txt",
+
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	// "remoteUser": "vscode"
+}
