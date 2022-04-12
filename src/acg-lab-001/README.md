@@ -10,5 +10,5 @@ Find more details [here](./docs/README.md).
 
 - [ ] Use dynamic blocks
 
-- [ ] Use variables
-- [x] Use locals
+- [x] Use variables
+- [ ] Use locals
