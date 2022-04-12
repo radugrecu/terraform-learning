@@ -4,11 +4,11 @@ Find more details [here](./docs/README.md).
 
 ## TODO
 
-[x] Use modules
+- [x] Use modules
 
-[ ] Public key as module argument
+- [ ] Public key as module argument
 
-[ ] Use dynamic blocks
+- [ ] Use dynamic blocks
 
-[ ] Use variables
-[x] Use locals
+- [ ] Use variables
+- [x] Use locals
